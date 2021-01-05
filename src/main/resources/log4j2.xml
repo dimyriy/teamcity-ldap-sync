@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration strict="true" name="XMLConfigTest">
+    <Loggers>
+        <Root level="WARN" additivity="false">
+            <AppenderRef level="WARN" ref="CONSOLE"/>
+        </Root>
+        <Logger name="jetbrains.buildServer" level="DEBUG" additivity="false">
+            <Appender-ref ref="CONSOLE" level="DEBUG"/>
+        </Logger>
+    </Loggers>
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %c{1}: %L - %msg%n%throwable}"/>
+        </Console>
+    </Appenders>
+</Configuration>
